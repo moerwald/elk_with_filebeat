@@ -1,0 +1,15 @@
+output:
+  logstash:
+    enabled: true
+    hosts:
+      - elk:5044
+    ssl:
+      certificate_authorities:
+        - /etc/pki/tls/certs/logstash-beats.crt
+    timeout: 15
+
+filebeat:
+  prospectors:
+    - type: log
+      paths:
+        - /data/*.log

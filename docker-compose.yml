@@ -1,0 +1,26 @@
+version: "3.1"
+
+services:
+
+  elk:
+    build:
+      context: ./elk_container
+      dockerfile: DockerFile
+    ports:
+      - "5601:5601"
+      - "9200:9200"
+      - "5044:5044"
+
+
+  filebeat:
+    build:
+      context: ./filebeat_container
+      dockerfile: DockerFile
+    depends_on: 
+      - elk
+    volumes:
+      - c:/temp/filesToScan:/data
+      - ./filebeat_container/filebeat.yml:/filebeat.yml
+            
+
+

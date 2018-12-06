@@ -1,0 +1,3 @@
+FROM sebp/elk
+
+# COPY myLogStashFilter.conf /etc/logstash/conf.d

@@ -1,0 +1,4 @@
+FROM nguoianphu/docker-filebeat
+
+RUN mkdir -p /etc/pki/tls/certs/
+COPY logstash-beats.crt /etc/pki/tls/certs/
