@@ -20,7 +20,7 @@ and call "log" on the container you wish to check. E.g.
 
 > docker container log --tail -f elk_filebeat_1
 
-#How to configure
+# How to configure
 
 ## Filebeat container
 
