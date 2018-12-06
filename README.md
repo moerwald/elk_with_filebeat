@@ -1,5 +1,5 @@
 # elk_with_filebeat
-Docker compose, with elk and filebeat containers
+Starts an ELK and a filebeat container. The filebeat container indexes files (suffix must be *.log) configured in the bind mount in the docker-compose.yml file. After starting the containers kibana is avaiable via http://localhost:5601.
 
 # How to start
 Update the volume in docker-compose.yml with your local drive where you want to index a bunch of log-files.
